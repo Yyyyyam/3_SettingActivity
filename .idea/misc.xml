@@ -4,6 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/WorkSpace/Java/Android/Thunder/tests/3_SettingActivity/app/src/main/res/layout/activity_list.xml" value="0.3619791666666667" />
+        <entry key="..\:/WorkSpace/Java/Android/Thunder/tests/3_SettingActivity/app/src/main/res/layout/activity_settings.xml" value="0.3619791666666667" />
+        <entry key="..\:/WorkSpace/Java/Android/Thunder/tests/3_SettingActivity/app/src/main/res/layout/fragment_setting_detail.xml" value="0.3619791666666667" />
+        <entry key="..\:/WorkSpace/Java/Android/Thunder/tests/3_SettingActivity/app/src/main/res/layout/fragment_setting_head.xml" value="0.3619791666666667" />
+        <entry key="..\:/WorkSpace/Java/Android/Thunder/tests/3_SettingActivity/app/src/main/res/layout/item_name.xml" value="0.3619791666666667" />
+        <entry key="..\:/WorkSpace/Java/Android/Thunder/tests/3_SettingActivity/app/src/main/res/layout/item_pic.xml" value="0.3619791666666667" />
+        <entry key="..\:/WorkSpace/Java/Android/Thunder/tests/3_SettingActivity/app/src/main/res/layout/item_setting_left.xml" value="0.3619791666666667" />
       </map>
     </option>
   </component>

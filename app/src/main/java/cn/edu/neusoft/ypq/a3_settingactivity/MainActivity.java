@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                     saveInfo();
                     toListActivity();
                 } else {
-                    Toast.makeText(MainActivity.this,"用户名或密码错误，请重新输入", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this , "用户名或密码错误，请重新输入" , Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setClass(MainActivity.this, ListActivity.class);
         startActivity(intent);
-        Toast.makeText(MainActivity.this,"登陆成功", Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this , "登录成功" , Toast.LENGTH_SHORT).show();
         finish();
     }
 
@@ -61,10 +61,10 @@ public class MainActivity extends AppCompatActivity {
 
     // 登陆成功时数据保存
     public void saveInfo() {
-        SharedPreferences preferences = getSharedPreferences("login_info",Context.MODE_PRIVATE);
+        SharedPreferences preferences = getSharedPreferences("login_info" , Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
-        editor.putString("name",NAME);
-        editor.putString("pwd",PWD);
+        editor.putString("name" , NAME);
+        editor.putString("pwd" , PWD);
         editor.commit();
     }
 }
