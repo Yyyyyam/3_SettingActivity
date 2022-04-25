@@ -38,6 +38,8 @@ public class ListActivity extends AppCompatActivity {
 
     public static final int IMAGE_LOADING = 0x111;
     public static final int IMAGE_LOADED = 0x110;
+    public static final String KEY_NAME = "name";
+    public static final String KEY_NUM = "num";
     private int[] mStatues = new int[]{0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0};
 
     @Override
@@ -50,8 +52,8 @@ public class ListActivity extends AppCompatActivity {
         List<Map<String, Object>> listItems = new ArrayList<>();
         for (int i = 0 ; i < 5 ; i++) {
             Map<String, Object> map = new HashMap<>();
-            map.put("name", "颜培琦");
-            map.put("num", String.valueOf(i));
+            map.put(KEY_NAME , "颜培琦");
+            map.put(KEY_NUM , String.valueOf(i));
             listItems.add(map);
         }
 
@@ -65,6 +67,7 @@ public class ListActivity extends AppCompatActivity {
                 if (position == 0) {
                     loadPic();
                     Toast.makeText(ListActivity.this , "load" , Toast.LENGTH_SHORT).show();
+
                 } else if (position == 1){
                     Intent intent = new Intent();
                     Bundle bundle = new Bundle();
@@ -72,11 +75,10 @@ public class ListActivity extends AppCompatActivity {
                     intent.putExtra("bundle", bundle);
                     intent.setClass(ListActivity.this, SettingActivity.class);
                     startActivity(intent);
-                    finish();
                 } else {
                     HashMap<String, String> map = (HashMap<String, String>) parent.getItemAtPosition(position);
-                    Toast.makeText(ListActivity.this , "姓名:" + map.get("name")
-                            + ",序号:" + map.get("num") , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ListActivity.this , "姓名:" + map.get(KEY_NAME)
+                            + ",序号:"+map.get(KEY_NUM) , Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -117,7 +119,7 @@ public class ListActivity extends AppCompatActivity {
                 LayoutInflater inflater = LayoutInflater.from(ListActivity.this);
                 ConstraintLayout layout = (ConstraintLayout) inflater.inflate(R.layout.item_pic, null);
                 TextView tvNum = layout.findViewById(R.id.item_pic_num);
-                tvNum.setText("第" + (position+1) + "张");
+                tvNum.setText("第" + (position + 1) + "张");
                 ImageView imageView = layout.findViewById(R.id.item_pic_iv);
                 imageView.setImageResource(picId.get(position));
                 ProgressBar progressBar = layout.findViewById(R.id.item_pic_progress);
